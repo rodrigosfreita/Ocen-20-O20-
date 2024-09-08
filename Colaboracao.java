@@ -1,66 +1,66 @@
-package Modelo;
+package Model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Colaboracao {
-    private String tipo;
-    private List<String> participantes;
-    private String data;
-    private String local;
+public class Collaboration {
+    private String type;
+    private List<String> participants;
+    private String date;
+    private String location;
 
-    public Colaboracao() {
-        this.participantes = new ArrayList<>();
+    public Collaboration() {
+        this.participants = new ArrayList<>();
     }
 
-    // Getters and setters
-    public String getTipo() {
-        return tipo;
+   
+    public String getType() {
+        return type;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public List<String> getParticipantes() {
-        return participantes;
+    public List<String> getParticipants() {
+        return participants;
     }
 
-    public void setParticipantes(List<String> participantes) {
-        this.participantes = participantes;
+    public void setParticipants(List<String> participants) {
+        this.participants = participants;
     }
 
-    public String getData() {
-        return data;
+    public String getDate() {
+        return date;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public String getLocal() {
-        return local;
+    public String getLocation() {
+        return location;
     }
 
-    public void setLocal(String local) {
-        this.local = local;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public void facilitar() {
+    public void facilitate() {
         
-        System.out.println("Facilitando colaboração do tipo " + tipo + " no local " + local + " na data " + data);
+        System.out.println("Facilitating collaboration of type " + type + " at location " + location + " on date " + date);
     }
 
-    public void registrarParticipantes(String participante) {
+    public void registerParticipant(String participant) {
        
-        participantes.add(participante);
-        System.out.println("Participante " + participante + " registrado na colaboração do tipo " + tipo);
+        participants.add(participant);
+        System.out.println("Participant " + participant + " registered in the collaboration of type " + type);
     }
 
-    public void definirDataLocal(String data, String local) {
+    public void setDateAndLocation(String date, String location) {
        
-        this.data = data;
-        this.local = local;
-        System.out.println("Data e local definidos: " + data + " em " + local);
+        this.date = date;
+        this.location = location;
+        System.out.println("Date and location set: " + date + " at " + location);
     }
 }
