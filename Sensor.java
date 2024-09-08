@@ -1,21 +1,21 @@
-package Modelo;
+package Model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Sensor {
-	private int id;
-    private String tipo;
-    private String localizacao;
+    private int id;
+    private String type;
+    private String location;
     private String status;
-    private List<String> dadosColetados;
+    private List<String> collectedData;
 
-    public Sensor(int id, String tipo, String localizacao) {
+    public Sensor(int id, String type, String location) {
         this.id = id;
-        this.tipo = tipo;
-        this.localizacao = localizacao;
-        this.status = "ativo";
-        this.dadosColetados = new ArrayList<>();
+        this.type = type;
+        this.location = location;
+        this.status = "active";
+        this.collectedData = new ArrayList<>();
     }
 
     
@@ -27,20 +27,20 @@ public class Sensor {
         this.id = id;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getType() {
+        return type;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getLocalizacao() {
-        return localizacao;
+    public String getLocation() {
+        return location;
     }
 
-    public void setLocalizacao(String localizacao) {
-        this.localizacao = localizacao;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public String getStatus() {
@@ -51,28 +51,29 @@ public class Sensor {
         this.status = status;
     }
 
-    public List<String> getDadosColetados() {
-        return dadosColetados;
+    public List<String> getCollectedData() {
+        return collectedData;
     }
 
-    public void ativar() {
-        this.status = "ativo";
+    public void activate() {
+        this.status = "active";
     }
 
-    public void desativar() {
-        this.status = "inativo";
+    public void deactivate() {
+        this.status = "inactive";
     }
 
-    public List<String> coletarDados() {
-        
-        dadosColetados.add("Dado simulado do sensor " + tipo);
-        return dadosColetados;
+    public List<String> collectData() {
+        // Simulating data collection
+        collectedData.add("Simulated data from sensor " + type);
+        return collectedData;
     }
 
-    public void enviarDados() {
-        
-        for (String dado : dadosColetados) {
-            System.out.println("Enviando dado: " + dado);
+    public void sendData() {
+        // Simulating data transmission
+        for (String data : collectedData) {
+            System.out.println("Sending data: " + data);
         }
     }
 }
+
