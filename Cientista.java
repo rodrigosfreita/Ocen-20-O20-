@@ -1,57 +1,57 @@
-package Modelo;
+package Model;
 
 import java.util.List;
 
-public class Cientista {
-    private String nome;
-    private String especializacao;
-    private String afiliacao;
+public class Scientist {
+    private String name;
+    private String specialization;
+    private String affiliation;
 
     // Getters and setters
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getEspecializacao() {
-        return especializacao;
+    public String getSpecialization() {
+        return specialization;
     }
 
-    public void setEspecializacao(String especializacao) {
-        this.especializacao = especializacao;
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
     }
 
-    public String getAfiliacao() {
-        return afiliacao;
+    public String getAffiliation() {
+        return affiliation;
     }
 
-    public void setAfiliacao(String afiliacao) {
-        this.afiliacao = afiliacao;
+    public void setAffiliation(String affiliation) {
+        this.affiliation = affiliation;
     }
 
-    public void coletarDados(Coral coral) {
+    public void collectData(Coral coral) {
         
-        coral.coletarDados();
-        System.out.println("Dados coletados pelo cientista " + nome + " do coral.");
+        coral.collectData();
+        System.out.println("Data collected by scientist " + name + " from the coral.");
     }
 
-    public void analisarComportamento(Comportamento comportamento) {
+    public void analyzeBehavior(Behavior behavior) {
         
-        comportamento.analisar();
-        System.out.println("Comportamento analisado pelo cientista " + nome + ": " + comportamento.getPadrao());
+        behavior.analyze();
+        System.out.println("Behavior analyzed by scientist " + name + ": " + behavior.getPattern());
     }
 
-    public void preverAmeacas(Ameaca ameaca) {
+    public void predictThreats(Threat threat) {
         
-        ameaca.prever();
-        System.out.println("Ameaça prevista pelo cientista " + nome + ": " + ameaca.getTipo());
+        threat.predict();
+        System.out.println("Threat predicted by scientist " + name + ": " + threat.getType());
     }
 
-    public void publicarResultados() {
+    public void publishResults() {
       
-        System.out.println("Resultados publicados pelo cientista " + nome + " da afiliacao " + afiliacao);
+        System.out.println("Results published by scientist " + name + " from affiliation " + affiliation);
     }
 }
