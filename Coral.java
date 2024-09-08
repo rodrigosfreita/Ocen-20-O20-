@@ -1,112 +1,109 @@
-package Modelo;
+package Model;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Coral {
-	 private double taxaCrescimento;
-	    private int densidadePolipos;
-	    private String respostaEstresse;
-	    private String cor;
-	    private double temperaturaAgua;
-	    private double nivelPH;
-	    private double luminosidade;
-	    private List<Sensor> sensores;
+    private double growthRate;
+    private int polypDensity;
+    private String stressResponse;
+    private String color;
+    private double waterTemperature;
+    private double pHLevel;
+    private double luminosity;
+    private List<Sensor> sensors;
 
-	    public Coral() {
-	        this.sensores = new ArrayList<>();
-	    }
+    public Coral() {
+        this.sensors = new ArrayList<>();
+    }
 
-	   
-	    public double getTaxaCrescimento() {
-	        return taxaCrescimento;
-	    }
+    public double getGrowthRate() {
+        return growthRate;
+    }
 
-	    public void setTaxaCrescimento(double taxaCrescimento) {
-	        this.taxaCrescimento = taxaCrescimento;
-	    }
+    public void setGrowthRate(double growthRate) {
+        this.growthRate = growthRate;
+    }
 
-	    public int getDensidadePolipos() {
-	        return densidadePolipos;
-	    }
+    public int getPolypDensity() {
+        return polypDensity;
+    }
 
-	    public void setDensidadePolipos(int densidadePolipos) {
-	        this.densidadePolipos = densidadePolipos;
-	    }
+    public void setPolypDensity(int polypDensity) {
+        this.polypDensity = polypDensity;
+    }
 
-	    public String getRespostaEstresse() {
-	        return respostaEstresse;
-	    }
+    public String getStressResponse() {
+        return stressResponse;
+    }
 
-	    public void setRespostaEstresse(String respostaEstresse) {
-	        this.respostaEstresse = respostaEstresse;
-	    }
+    public void setStressResponse(String stressResponse) {
+        this.stressResponse = stressResponse;
+    }
 
-	    public String getCor() {
-	        return cor;
-	    }
+    public String getColor() {
+        return color;
+    }
 
-	    public void setCor(String cor) {
-	        this.cor = cor;
-	    }
+    public void setColor(String color) {
+        this.color = color;
+    }
 
-	    public double getTemperaturaAgua() {
-	        return temperaturaAgua;
-	    }
+    public double getWaterTemperature() {
+        return waterTemperature;
+    }
 
-	    public void setTemperaturaAgua(double temperaturaAgua) {
-	        this.temperaturaAgua = temperaturaAgua;
-	    }
+    public void setWaterTemperature(double waterTemperature) {
+        this.waterTemperature = waterTemperature;
+    }
 
-	    public double getNivelPH() {
-	        return nivelPH;
-	    }
+    public double getPHLevel() {
+        return pHLevel;
+    }
 
-	    public void setNivelPH(double nivelPH) {
-	        this.nivelPH = nivelPH;
-	    }
+    public void setPHLevel(double pHLevel) {
+        this.pHLevel = pHLevel;
+    }
 
-	    public double getLuminosidade() {
-	        return luminosidade;
-	    }
+    public double getLuminosity() {
+        return luminosity;
+    }
 
-	    public void setLuminosidade(double luminosidade) {
-	        this.luminosidade = luminosidade;
-	    }
+    public void setLuminosity(double luminosity) {
+        this.luminosity = luminosity;
+    }
 
-	    public void coletarDados() {
-	        for (Sensor sensor : sensores) {
-	            List<String> dados = sensor.coletarDados();
-	            for (String dado : dados) {
-	                System.out.println("Dado coletado pelo sensor " + sensor.getTipo() + ": " + dado);
-	            }
-	        }
-	    }
+    public void collectData() {
+        for (Sensor sensor : sensors) {
+            List<String> data = sensor.collectData();
+            for (String datum : data) {
+                System.out.println("Data collected by sensor " + sensor.getType() + ": " + datum);
+            }
+        }
+    }
 
-	    public double calcularTaxaCrescimento() {
-	       
-	        return taxaCrescimento * (1 + (densidadePolipos / 100.0));
-	    }
+    public double calculateGrowthRate() {
+        // Growth rate calculation based on polyp density
+        return growthRate * (1 + (polypDensity / 100.0));
+    }
 
-	    public int medirDensidadePolipos() {
-	       
-	        return densidadePolipos;
-	    }
+    public int measurePolypDensity() {
+        return polypDensity;
+    }
 
-	    public String detectarRespostaEstresse() {
-	       
-	        if (temperaturaAgua > 30 || nivelPH < 7.5) {
-	            respostaEstresse = "Alta";
-	        } else {
-	            respostaEstresse = "Baixa";
-	        }
-	        return respostaEstresse;
-	    }
+    public String detectStressResponse() {
+        if (waterTemperature > 30 || pHLevel < 7.5) {
+            stressResponse = "High";
+        } else {
+            stressResponse = "Low";
+        }
+        return stressResponse;
+    }
 
-	    public void adicionarSensor(Sensor sensor) {
-	        this.sensores.add(sensor);
-	    }
+    public void addSensor(Sensor sensor) {
+        this.sensors.add(sensor);
+    }
 
-	    public List<Sensor> getSensores() {
-	        return sensores;
-	    }
+    public List<Sensor> getSensors() {
+        return sensors;
+    }
 }
