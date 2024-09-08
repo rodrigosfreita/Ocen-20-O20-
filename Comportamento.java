@@ -1,53 +1,53 @@
-package Modelo;
+package Model;
 
-public class Comportamento {
-	private String padrao;
-    private double frequenciaDeMovimento;
-    private String interacaoComFauna;
+public class Behavior {
+    private String pattern;
+    private double movementFrequency;
+    private String interactionWithFauna;
 
-    // Getters and setters
-    public String getPadrao() {
-        return padrao;
+  
+    public String getPattern() {
+        return pattern;
     }
 
-    public void setPadrao(String padrao) {
-        this.padrao = padrao;
+    public void setPattern(String pattern) {
+        this.pattern = pattern;
     }
 
-    public double getFrequenciaDeMovimento() {
-        return frequenciaDeMovimento;
+    public double getMovementFrequency() {
+        return movementFrequency;
     }
 
-    public void setFrequenciaDeMovimento(double frequenciaDeMovimento) {
-        this.frequenciaDeMovimento = frequenciaDeMovimento;
+    public void setMovementFrequency(double movementFrequency) {
+        this.movementFrequency = movementFrequency;
     }
 
-    public String getInteracaoComFauna() {
-        return interacaoComFauna;
+    public String getInteractionWithFauna() {
+        return interactionWithFauna;
     }
 
-    public void setInteracaoComFauna(String interacaoComFauna) {
-        this.interacaoComFauna = interacaoComFauna;
+    public void setInteractionWithFauna(String interactionWithFauna) {
+        this.interactionWithFauna = interactionWithFauna;
     }
 
-    public void analisar() {
+    public void analyze() {
         
-        if (frequenciaDeMovimento > 5.0) {
-            padrao = "Alta atividade";
-        } else if (frequenciaDeMovimento > 1.0) {
-            padrao = "Atividade moderada";
+        if (movementFrequency > 5.0) {
+            pattern = "High activity";
+        } else if (movementFrequency > 1.0) {
+            pattern = "Moderate activity";
         } else {
-            padrao = "Baixa atividade";
+            pattern = "Low activity";
         }
 
-        if (interacaoComFauna.equalsIgnoreCase("Alta")) {
-            padrao += " com alta interação com a fauna";
-        } else if (interacaoComFauna.equalsIgnoreCase("Moderada")) {
-            padrao += " com interação moderada com a fauna";
+        if (interactionWithFauna.equalsIgnoreCase("High")) {
+            pattern += " with high interaction with fauna";
+        } else if (interactionWithFauna.equalsIgnoreCase("Moderate")) {
+            pattern += " with moderate interaction with fauna";
         } else {
-            padrao += " com baixa interação com a fauna";
+            pattern += " with low interaction with fauna";
         }
         
-        System.out.println("Análise de comportamento: " + padrao);
+        System.out.println("Behavior analysis: " + pattern);
     }
 }
