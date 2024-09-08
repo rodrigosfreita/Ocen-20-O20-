@@ -1,56 +1,54 @@
-package Modelo;
+package Model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Turista {
-    private String nome;
-    private String paisOrigem;
-    private List<String> interesses;
-    private List<String> atividades;
+public class Tourist {
+    private String name;
+    private String countryOfOrigin;
+    private List<String> interests;
+    private List<String> activities;
 
-    public Turista() {
-        this.interesses = new ArrayList<>();
-        this.atividades = new ArrayList<>();
+    public Tourist() {
+        this.interests = new ArrayList<>();
+        this.activities = new ArrayList<>();
     }
 
-    // Getters and setters
-    public String getNome() {
-        return nome;
+   
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPaisOrigem() {
-        return paisOrigem;
+    public String getCountryOfOrigin() {
+        return countryOfOrigin;
     }
 
-    public void setPaisOrigem(String paisOrigem) {
-        this.paisOrigem = paisOrigem;
+    public void setCountryOfOrigin(String countryOfOrigin) {
+        this.countryOfOrigin = countryOfOrigin;
     }
 
-    public List<String> getInteresses() {
-        return interesses;
+    public List<String> getInterests() {
+        return interests;
     }
 
-    public void setInteresses(List<String> interesses) {
-        this.interesses = interesses;
+    public void setInterests(List<String> interests) {
+        this.interests = interests;
     }
 
-    public List<String> getAtividades() {
-        return atividades;
+    public List<String> getActivities() {
+        return activities;
     }
 
-    public void colaborar(String colaboracao) {
-        
-        System.out.println(nome + " do país " + paisOrigem + " está colaborando em: " + colaboracao);
+    public void collaborate(String collaboration) {
+        System.out.println(name + " from " + countryOfOrigin + " is collaborating on: " + collaboration);
     }
 
-    public void participarAtividades(String atividade) {
-        
-        atividades.add(atividade);
-        System.out.println(nome + " do país " + paisOrigem + " está participando da atividade: " + atividade);
+    public void participateInActivities(String activity) {
+        activities.add(activity);
+        System.out.println(name + " from " + countryOfOrigin + " is participating in the activity: " + activity);
     }
 }
