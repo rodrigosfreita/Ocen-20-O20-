@@ -1,55 +1,55 @@
-package Modelo;
+package Model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComunidadeLocal {
-    private String nome;
-    private String regiao;
-    private int numeroDeMembros;
-    private List<String> eventos;
+public class LocalCommunity {
+    private String name;
+    private String region;
+    private int numberOfMembers;
+    private List<String> events;
 
-    public ComunidadeLocal() {
-        this.eventos = new ArrayList<>();
+    public LocalCommunity() {
+        this.events = new ArrayList<>();
     }
 
-    // Getters and setters
-    public String getNome() {
-        return nome;
+    
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getRegiao() {
-        return regiao;
+    public String getRegion() {
+        return region;
     }
 
-    public void setRegiao(String regiao) {
-        this.regiao = regiao;
+    public void setRegion(String region) {
+        this.region = region;
     }
 
-    public int getNumeroDeMembros() {
-        return numeroDeMembros;
+    public int getNumberOfMembers() {
+        return numberOfMembers;
     }
 
-    public void setNumeroDeMembros(int numeroDeMembros) {
-        this.numeroDeMembros = numeroDeMembros;
+    public void setNumberOfMembers(int numberOfMembers) {
+        this.numberOfMembers = numberOfMembers;
     }
 
-    public List<String> getEventos() {
-        return eventos;
+    public List<String> getEvents() {
+        return events;
     }
 
-    public void colaborar(String colaboracao) {
+    public void collaborate(String collaboration) {
         
-        System.out.println("A comunidade " + nome + " da região " + regiao + " está colaborando em: " + colaboracao);
+        System.out.println("The community " + name + " from the region " + region + " is collaborating on: " + collaboration);
     }
 
-    public void organizarEventos(String evento) {
+    public void organizeEvents(String event) {
        
-        eventos.add(evento);
-        System.out.println("A comunidade " + nome + " da região " + regiao + " organizou o evento: " + evento);
+        events.add(event);
+        System.out.println("The community " + name + " from the region " + region + " organized the event: " + event);
     }
 }
